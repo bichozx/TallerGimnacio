@@ -1,0 +1,54 @@
+* {
+    padding: 0%;
+}
+
+.logo1 {
+    background-image: url(gimnacio1/bodytech.jpg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+header a {
+    text-decoration: none;
+    font-family: 'Lekton', sans-serif;
+    font-size: 2vw;
+    color: darkorange;
+}
+
+.color1 {
+    color: rgb(235, 169, 90);
+    text-decoration: none;
+}
+
+h1 {
+    justify-items: center;
+    font-family: 'Lekton', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.resultado {
+    font-family: 'Lekton', sans-serif;
+    margin-top: 3em;
+    justify-items: right;
+    text-align: center;
+    font-weight: lighter;
+    text-decoration: solid;
+}
+
+.regresar {
+    display: flex;
+    margin-top: 5em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#regreso {
+    font-family: 'Lekton', sans-serif;
+    font-weight: bold;
+    color: rgb(235, 169, 90);
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+}
