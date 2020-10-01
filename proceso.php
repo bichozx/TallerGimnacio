@@ -29,6 +29,7 @@
 
     </section>
     <section>
+        <div>
         <h2 class="resultado">
 
         <?php
@@ -73,6 +74,7 @@
       }
             ?>
             </h2> 
+            </div>
 
 
             <button  class="calculo btn-lg btn-block regresar"><a id="regreso"  href="index.html">REGRESAR</a></button>
