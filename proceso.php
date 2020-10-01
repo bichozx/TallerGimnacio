@@ -29,55 +29,53 @@
 
     </section>
     <section>
-        <div>
-        <h2 class="resultado">
+    <div>
 
-        <?php
-        if(!$_POST){
-            header( 'location: index.html');
+    <?php if(isset($_POST['validar'])): ?>
 
-        }
-            $pes = "";
-            $alt = "";
+            <h2 class="resultado">
 
-           if(isset($_POST['validar'])){ 
+                <?php 
+                $pes = $_POST['peso'];
+                $alt = $_POST['altura'];
+                
+                $imc = $pes/($alt*$alt);
+                if ($imc <= 18.4) {
 
-              $pes = $_POST['peso'];
-              $alt = $_POST['altura'];
+                    echo number_format ($imc). ' tiene insuficincia de peso ';
+            # code...
+                } else if (18.5 <= $imc && $imc <= 24.9) {
 
-             $imc = $pes/($alt*$alt);
+                    echo number_format ($imc,2). ' su peso es normal ';
 
-            if ($imc <= 18.4) {
-
-                echo number_format ($imc). ' tiene insuficincia de peso ';
-        # code...
-            } else if (18.5 <= $imc && $imc <= 24.9) {
-
-                echo number_format ($imc,2). ' su peso es normal ';
-   
                 }else if (25<= $imc && $imc <= 29.9) {
 
                     echo number_format ($imc,2). ' tiene sobrepeso ';
+                # code...
+                }else if  (30 <= $imc && $imc <= 34.9) {
+
+                    echo number_format ($imc,2). ' esta en etapa de obesidad 1 ';
             # code...
-                    }else if  (30 <= $imc && $imc <= 34.9) {
+                } else if (35 <= $imc && $imc <= 39.9) {
 
-                        echo number_format ($imc,2). ' esta en etapa de obesidad 1 ';
-           # code...
-                        } else if (35 <= $imc && $imc <= 39.9) {
+                    echo number_format ($imc,2). ' esta en etapa de obesidad 2 ';
+            # code...
+                }else 
+                                        
+                    echo number_format ($imc,2). ' esta en etapa de obesidad 3 ';
+                                                    # code..
 
-                            echo number_format ($imc,2). ' esta en etapa de obesidad 2 ';
-           # code...
-                            }else 
-                                    
-                            echo number_format ($imc,2). ' esta en etapa de obesidad 3 ';
-                                                 # code...
-      }
-            ?>
-            </h2> 
-            </div>
+                 ?>
+            </h2>
+
+            
+    <?php endif ?>
+    </div>
+        
+           
 
 
-            <button  class="calculo btn-lg btn-block regresar"><a id="regreso"  href="index.html">REGRESAR</a></button>
+    <button  class="calculo btn-lg btn-block regresar"><a id="regreso"  href="index.html">REGRESAR</a></button>
         
     </section>
 
